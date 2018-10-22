@@ -1,6 +1,6 @@
 # Laravel 5.7+ preset tailwind, sass & vue
 
-A scaffolding preset for adding the necesary npm dependecies and file structure for usign [Tailwind CSS](https://tailwindcss.com), [Sass](https://sass-lang.com/) and [Vue.js](https://vuejs.org/) with a Laravel 5.7 project.
+A scaffolding preset for adding the necesary npm dependecies and file structure for using [Tailwind CSS](https://tailwindcss.com), [Sass](https://sass-lang.com/) and [Vue.js](https://vuejs.org/) with a Laravel 5.7 project.
 
 *This package only works with Laravel 5.7 due to the changes on the resources directory.*
 
