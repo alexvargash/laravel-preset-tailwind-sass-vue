@@ -1,0 +1,23 @@
+{
+    "name": "alexvargash/laravel-preset-tailwind-sass-vue",
+    "description": "Laravel preset with Tailwindcss, sass and vue set up for Laravel >=5.7",
+    "keywords": ["laravel", "laravel preset", "tailwindcss", "sass", "vue", "vue-router"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Vargas",
+            "email": "alexvargas.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Alexvargash\\LaravelPreset\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Alexvargash\\LaravelPreset\\TailwindSassVueServiceProvider"]
+        }
+    }
+}

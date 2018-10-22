@@ -1,6 +1,6 @@
 <?php
 
-namespace Alexvargash;
+namespace Alexvargash\LaravelPreset;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
@@ -55,7 +55,7 @@ class Preset extends LaravelPreset
      */
     public static function updateWebpackMix()
     {
-        copy(__DIR__.'/stubs/webpack.mix.js', base_path('webpack.mix.js'));
+        copy(__DIR__.'/stubs/js/webpack.mix.js', base_path('webpack.mix.js'));
     }
 
     /**
@@ -65,22 +65,23 @@ class Preset extends LaravelPreset
      */
     public static function updateScripts()
     {
-        copy(__DIR__.'/stubs/app.js', resource_path('js/app.js'));
-        copy(__DIR__.'/stubs/bootstrap.js', resource_path('js/bootstrap.js'));
-        copy(__DIR__.'/stubs/VueApp.js', resource_path('js/VueApp.js'));
+        copy(__DIR__.'/stubs/js/app.js', resource_path('js/app.js'));
+        copy(__DIR__.'/stubs/js/VueApp.js', resource_path('js/VueApp.js'));
+        copy(__DIR__.'/stubs/js/bootstrap.js', resource_path('js/bootstrap.js'));
     }
 
     /**
-     * Update the sass directory to have the configuration necessary to use tailwindcss.
+     * Update the sass directory to have the configuration necessary to use
+     * tailwindcss.
      *
      * @return void
      */
     public static function updateSassDirectory()
     {
         File::cleanDirectory(resource_path('sass'));
-        copy(__DIR__.'/stubs/app.sass', resource_path('sass/app.sass'));
-        File::makeDirectory(resource_path('sass'). DIRECTORY_SEPARATOR . 'components');
+        copy(__DIR__.'/stubs/sass/app.sass', resource_path('sass/app.sass'));
         File::makeDirectory(resource_path('sass'). DIRECTORY_SEPARATOR . 'utilities');
+        File::makeDirectory(resource_path('sass'). DIRECTORY_SEPARATOR . 'components');
     }
 
     /**
@@ -91,7 +92,7 @@ class Preset extends LaravelPreset
     public static function updateViewsDirectory()
     {
         File::makeDirectory(resource_path('views'). DIRECTORY_SEPARATOR . 'layouts');
-        copy(__DIR__.'/stubs/app.blade.php', resource_path('views/layouts/app.blade.php'));
-        copy(__DIR__.'/stubs/welcome.blade.php', resource_path('views/welcome.blade.php'));
+        copy(__DIR__.'/stubs/php/app.blade.php', resource_path('views/layouts/app.blade.php'));
+        copy(__DIR__.'/stubs/php/welcome.blade.php', resource_path('views/welcome.blade.php'));
     }
 }
