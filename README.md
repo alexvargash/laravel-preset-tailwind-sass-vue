@@ -7,13 +7,15 @@ A scaffolding preset for adding the necesary npm dependecies and file structure 
 ## Preset
 
 1. This package adds the following npm dependencies:
+The NPM dependencies are on the latest version as of 15/01/2019.
 
 | Package              | Current version |
 | -------------------- |:---------------:|
-| vue-router           | 3.0.1           |
-| tailwindcss          | 0.6.6           |
-| laravel-mix          | 2.1.14          |
-| laravel-mix-purgecss | 3.0.0           |
+| vue                  | 2.5.22          |
+| vue-router           | 3.0.2           |
+| tailwindcss          | 0.7.3           |
+| laravel-mix          | 4.0.14          |
+| laravel-mix-purgecss | 4.0.0           |
 | laravel-mix-tailwind | 0.1.0           |
 
 2. Removes the unnecessary lines on *app.js* and *botstrap.js*.
